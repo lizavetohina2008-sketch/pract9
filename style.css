@@ -1,0 +1,159 @@
+/* Сброс стандартных отступов */
+* { /* "*" - обращение ко всем элементам страницвы */
+    margin: 0; /* внешние отступы */
+    padding: 0; /* Внутренние отступы */
+    box-sizing: border-box; /* свойство вычисляющее ширину и длину */
+}
+/* px - пиксели (фиксированный размер)
+
+rem - относительно размера шрифта корневого элемента (обычно 16px) - лучше для использования
+
+% - проценты от родительского элемента */
+/* Стили для body */
+body {
+    font-family: 'Arial', sans-serif; /* свой-ва для шрифта текста */
+    line-height: 1.6; /* меж. строчный интервал */
+    color: #333; /* цвет текста */
+    background-color: #f8f9fa; /* цвет фона */
+}
+
+/* Контейнер для центрирования контента */
+.container { /* если хотим написать стили для созданного нами класса - контейнера 
+    обращаемся к нему через "." и имя */
+    max-width: 1200px; /* максимальная ширина */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили шапки */
+.header {
+    background-color: #e74c3c;
+    color: white;
+    padding: 1rem 0;
+}
+
+.header .container { /* стиль применяется к элементам с классом container внутри header */
+    display: flex; /* Flexbox layout: элементы становятся гибкими
+    flex - используется при адаптивной верстке*/
+    justify-content: space-between; /* равномерное распределение: первый элемент слева, последний справа */
+    align-items: center; /* вертикальное выравнивание по центру */
+}
+
+.logo {
+    font-size: 1.5rem; /* размер шрифта */
+    font-weight: bold; /* жирный шрифт */
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    gap: 32px; /* расстояние между элементами внутри flex-контейнера */
+}
+
+.nav-item {
+    cursor: pointer; /*  курсор мыши указатель (как на ссылках) */
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /*скругление углов*/
+    transition: background-color 0.3s; /*плавное изменение фона за 0.3 секунды*/
+}
+
+.nav-item:hover { /* :hover - псевдокласс: стиль применяется при наведении курсора */
+    background-color: #97a547;
+}
+
+/* Стили баннера */
+.banner {
+    background: #97a547 ; /* фон */
+    color: white;
+    padding: 4rem 0;
+    text-align: center; /* выравнивание текста по центру */
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Сетка товаров */
+.products-flex {
+    display: flex; /* включает Flexbox */
+    flex-wrap: wrap; /* разрешает перенос на новую строк */
+    gap: 2rem; /* расстояние между элементами сетки */
+    margin: 3rem 0;
+}
+
+.product-card {
+    flex: 1 1 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s; /* плавное изменение */
+    min-width: 250px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* перемещение элемента на 5px вверх при наведении */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    color: #e74c3c;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Стили подвала */
+.footer {
+    background-color: #e74c3c;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    padding: 0.5rem 1rem;
+    background-color: #97a547;
+    border-radius: 4px;
+    cursor: pointer;
+}
